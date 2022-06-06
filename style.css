@@ -144,7 +144,11 @@ header {
     position:absolute;
     bottom: 0px;
     height:inherit;
-    
+    display: none;
+}
+
+.slider li.show {
+    display: block;
 }
 
 
