@@ -20,6 +20,9 @@ body {
   position: relative;
   height: 600px;
   margin: 20px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .wrapper .slider img {
@@ -28,6 +31,7 @@ body {
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  user-select: none;
 }
 
 .wrapper .slider img:nth-child(1) {
@@ -43,18 +47,9 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: calc(50% - 2px);
-  z-index: 3;
-}
-
-.wrapper .slider .range {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: calc(50% - 2px);
-  width: 4px;
+  left: calc(50% - 1px);
+  width: 2px;
   background-color: #fff;
-  content: "";
   z-index: 3;
   pointer-events: none;
 }
@@ -62,18 +57,11 @@ body {
 .wrapper .slider span {
   position: absolute;
   top: 50%;
-  left: calc(50% - 40px);
+  left: calc(50% - 25px);
   transform: translateY(-50%);
-  width: 80px;
+  width: 50px;
   height: 30px;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 4px;
-  color: #aaaaaa;
+  border-radius: 6px;
   z-index: 4;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 10px;
-  cursor: pointer;
-  user-select: none;
-  background: url('images/left-arrow.png') 5px 50% no-repeat, url('images/right-arrow.png') calc(100% - 5px) 50% no-repeat, rgba(255, 255, 255, 0.9);
+  background: #ffffff url('images/double-arrow.svg') 50% 50% no-repeat;
 }
