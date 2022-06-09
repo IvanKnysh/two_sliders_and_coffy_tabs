@@ -20,4 +20,46 @@ body {
 
 ul {
     list-style-type: none;
+    min-width: 300px;
+}
+
+ul li {
+    width: 100%;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+    color: #410202;
+    line-height: 35px;
+    font-size: 16px;
+    margin-bottom: 2px;
+    background-color: #f8f8f8;
+    clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
+}
+
+ul li span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    background-color: #ffffff;
+    padding-left: 20px;
+    box-sizing: border-box;
+    clip-path: polygon(0% 0%, 94% 0%, 100% 50%, 94% 100%, 0% 100%);
+}
+
+ul li:hover span {
+    background-color: #f8f8f8;
+}
+
+ul li.active {
+    background-color: #410202;
+    color: #fff;
+}
+
+ul li.active span {
+    background-color: #410202;
+    color: #fff;
 }
