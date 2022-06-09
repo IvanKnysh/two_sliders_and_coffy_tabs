@@ -13,7 +13,7 @@ body {
     margin: 50px auto;
 }
 
-.coffy {
+.coffee {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -65,16 +65,16 @@ ul li.active span {
     color: #fff;
 }
 
-.coffy .content {
+.coffee .content {
     position: relative;
 }
 
-.coffy .content img {
+.coffee .content img {
     position: relative;
     z-index: 2;
 }
 
-.coffy .content .coffe-content {
+.coffee .content .coffee-content {
     position: absolute;
     top: 45px;
     left: 0;
@@ -86,28 +86,28 @@ ul li.active span {
     height: 400px;
 }
 
-.coffy .content .coffe-content span {
+.coffee .content .coffee-content span {
     width: 100%;
     background-color: transparent;
 }
 
-.coffy .content .coffe-content span.coffee {
+.coffee .content .coffee-content span.coffee {
     background-color: #333;
 }
 
-.coffy .content .coffe-content span.doublecoffee {
+.coffee .content .coffee-content span.doublecoffee {
     background-color: #333;
     height: 50px;
 }
 
-.coffy .content .coffe-content span.water {
+.coffee .content .coffee-content span.water {
     background-color: #5cc0fe;
 }
 
-.coffy .content .coffe-content span.milk {
-    background-color: #fdfcfa;
+.coffee .content .coffee-content span.milk {
+    background-color: #fdfff5;
 }
 
-.coffy .content .coffe-content span.milkfoam {
+.coffee .content .coffee-content span.milkfoam {
     background: url("images/milkfoam.jpeg");
 }

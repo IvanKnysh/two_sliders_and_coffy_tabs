@@ -5,7 +5,8 @@
 * */
 class CoffeeMachine {
     constructor() {
-        this.wrapper = document.querySelector('.coffy');
+        this.wrapper = document.querySelector('.coffee');
+        this.coffeeContent = this.wrapper.querySelector('.coffee-content');
         this.ul = this.wrapper.querySelector('ul');
     }
 
@@ -28,7 +29,7 @@ class CoffeeMachine {
     }
 
     clearSpan() {
-        this.wrapper.querySelector('.coffe-content').querySelectorAll('span').forEach(item => {
+        this.coffeeContent.querySelectorAll('span').forEach(item => {
             item.removeAttribute('class');
             item.removeAttribute('style');
         });
@@ -37,7 +38,7 @@ class CoffeeMachine {
     menuClick(data) {
         this.ul.addEventListener('click', (e) => {
             const target = e.target;
-            const countElements = this.wrapper.querySelector('.coffe-content').childElementCount;
+            const countElements = this.coffeeContent.childElementCount;
 
             this.addMenuItemActiveClass(target);
             this.clearSpan();
@@ -45,8 +46,8 @@ class CoffeeMachine {
             data.forEach(item => {
                 if (target.parentElement.dataset.name === item.title_en) {
                     item.recipe.forEach((rec, i) => {
-                        this.wrapper.querySelector('.coffe-content').children[i].classList.add(rec.class_name);
-                        this.wrapper.querySelector('.coffe-content').children[i].style.height = rec.volume / countElements * 100 + '%';
+                        this.coffeeContent.children[i].classList.add(rec.class_name);
+                        this.coffeeContent.children[i].style.height = rec.volume / countElements * 100 + '%';
                     });
                 }
             });
