@@ -6,3 +6,18 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.container {
+    max-width: 960px;
+    display: block;
+    margin: 50px auto;
+}
+
+.coffy {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+}
