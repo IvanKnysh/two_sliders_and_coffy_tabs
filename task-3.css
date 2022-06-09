@@ -16,6 +16,7 @@ body {
 .coffy {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 ul {
@@ -62,4 +63,52 @@ ul li.active {
 ul li.active span {
     background-color: #410202;
     color: #fff;
+}
+
+.coffy .content {
+    position: relative;
+}
+
+.coffy .content img {
+    position: relative;
+    z-index: 2;
+}
+
+.coffy .content .coffe-content {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    z-index: 1;
+    height: 400px;
+}
+
+.coffy .content .coffe-content span {
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+}
+
+.coffy .content .coffe-content span.coffee {
+    background-color: #333;
+}
+
+.coffy .content .coffe-content span.doublecoffee {
+    background-color: #333;
+    height: 50px;
+}
+
+.coffy .content .coffe-content span.water {
+    background-color: #5cc0fe;
+}
+
+.coffy .content .coffe-content span.milk {
+    background-color: #fdfcfa;
+}
+
+.coffy .content .coffe-content span.milkfoam {
+    background: url("images/milkfoam.jpeg");
 }

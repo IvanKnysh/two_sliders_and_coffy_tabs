@@ -13,10 +13,22 @@ class CoffeeMachine {
         let items = '';
 
         data.forEach(item => {
-            items += `<li><span>${item.title_ua}</span></li>`;
+            items += `<li data-name="${item.title_en}"><span>${item.title_ua}</span></li>`;
         });
 
         this.ul.insertAdjacentHTML('beforeend', items);
+    }
+
+    menuClick(data) {
+        this.ul.addEventListener('click', (e) => {
+            const target = e.target;
+
+            data.forEach(item => {
+                if (target.parentElement.dataset.name === item.title_en) {
+                    console.log(item.recipe);
+                }
+            });
+        });
     }
 
     getData() {
@@ -24,6 +36,7 @@ class CoffeeMachine {
             .then(response => response.json())
             .then(data => {
                 this.addDefaultMenu(data);
+                this.menuClick(data);
             })
             .catch(error => console.error(error));
     }
